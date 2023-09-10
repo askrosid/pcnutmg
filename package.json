@@ -1,0 +1,14 @@
+{
+  "name": "pcnu",
+  "version": "1.0.0",
+  "description": "WordPress Theme for PCNU Temanggung",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+  },
+  "author": "Ahmad Rosid",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

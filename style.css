@@ -1,0 +1,179 @@
+/*
+Theme Name: PCNU
+Theme URI: https://pcnutemanggung.or.id
+Author: Ahmad Rosid
+Author URI: https://pcnutemanggung.or.id
+Description: WordPress Theme for PCNU Temanggung
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pcnu
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and up to you.
+*/
+
+/*-------------------------------------------------------------------------------
+  1.WordPress WYSIWYG styles
+-------------------------------------------------------------------------------*/
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter, div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+@media only screen and (max-width:480px){
+ .single .alignright,.single .alignleft{
+ float:none;
+ }
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Global Content */
+.content p:not(:last-child){
+   margin-bottom: 15px;
+}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
+   font-weight: 600;
+   margin-bottom:5px;
+}
+.content strong{
+   font-weight: 600;
+}
+.content ul{
+   list-style-type: disc;
+   list-style-position: inside;
+   padding-left: 10px;
+   margin-bottom: 15px;
+}
+.content ol{
+   list-style-type: decimal;
+   list-style-position: inside;
+   padding-left: 10px;
+   margin-bottom: 15px;
+}
+.content a{
+	color: #32baa6;
+}
+.content a:hover{
+	color: #009b8e;
+}
+
+/*Toggle DarkMode*/
+.nne {
+  display: none;
+}
+.blck {
+  display: block;
+}
+/* Footer */
+.menu-informasi .menu-item a:hover{
+  color: #191b32;
+}
+html.dark .menu-informasi .menu-item a:hover{
+  color: #f9f9f9;
+}
+/* Hero Slider */
+.avatar{
+  border-radius: 50%;
+}
+/* Latest News Slider */
+.latest-news-slider .slick-prev:before, .latest-news-slider .slick-next:before{
+  font-size:28px;
+}
+.latest-news-slider .slick-prev{
+  left:18px;
+  z-index:11;
+}
+@media(max-width:767px){
+  .latest-news-slider .slick-prev{
+    left:10px;
+  }
+}
+.latest-news-slider .slick-next{
+  right:40px;
+  z-index:11;
+}
+@media(max-width:767px){
+  .latest-news-slider .slick-next{
+    right:17px;
+  }
+}
+/* Latest Post With Filter */
+.filter ul li a.active{
+  color: #009b8e;
+  border-color: #009b8e;
+}
