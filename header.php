@@ -10,8 +10,10 @@
    <?php wp_head(); ?>
 </head>
 <body <?php body_class('bg-bglight-100 text-textlight-100 font-montserrat font-normal text-base dark:bg-bgdark-100 dark:text-textdark-200'); ?>>
+   <!-- Header - Start -->
    <header id="main-header" class="border-b border-b-border-100 dark:border-b dark:border-b-border-200">
       <div class="flex mx-auto max-w-7xl px-3 h-[70px] items-center sm:h-20 lg:h-24">
+         <!-- Logo - Start -->
          <div class="flex justify-start w-4/5 md:w-1/3 lg:w-1/4">
             <?php if(has_custom_logo()): ?>
                <?php
@@ -24,7 +26,26 @@
                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home" class="text-lg font-semibold text-textlight-200 hover:text-brand-200 dark:text-textdark-100 dark:hover:text-brand-100"><h3><?php echo esc_attr( get_bloginfo( 'name' ) ); ?></h3></a>
             <?php endif; ?>
          </div>
-         <div class="flex justify-end space-x-10 w-1/5 md:w-2/3 lg:w-3/4">
+         <!-- Logo - End -->
+         <div class="flex justify-end space-x-8 w-1/5 md:w-2/3 lg:w-3/4">
+            <!-- Nav Menu - Start -->
+            <nav class="header-menu hidden lg:flex">
+               <?php
+                  if(has_nav_menu( 'header-menu' )) {
+                     wp_nav_menu( array(
+                        'theme_location'  => 'header-menu',
+                        'container'       => false,
+                        'menu_class'      => 'nav-menu flex items-center justify-end space-x-9 uppercase font-semibold text-textlight-200 dark:text-textdark-200'
+                     ) );
+                  }
+               ?>
+            </nav>
+            <!-- Nav Menu - End -->
+            <!-- Menu Toggle - Start -->
+            <div class="header-toggle lg:hidden">
+               <a href="#" class="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:text-blue-200"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg></a>
+            </div>
+            <!-- Menu Toggle - End -->
             <button id="toggledark" class="group" onclick="toggleDark()" name="toggle">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="nne sun w-6 h-6 stroke-brand-100 group-hover:stroke-brand-200">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -36,4 +57,5 @@
          </div>
       </div>
    </header>
+   <!-- Header - End -->
    <main id="main-content" class="py-10 md:py-12">
