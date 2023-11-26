@@ -87,11 +87,11 @@ function pcnu_meta_description() {
     }
     if ( is_category() ) {
         $des_cat = strip_tags(category_description());
-        echo '<meta name="description" content="' . $des_cat . '">' . "\n";
+        echo '<meta name="description" content="' . esc_attr( $des_cat ) . '">' . "\n";
     }
     if ( is_tag() ) {
         $des_tag = strip_tags(tag_description());
-        echo '<meta name="description" content="' . $des_tag . '">' . "\n";
+        echo '<meta name="description" content="' . esc_attr( $des_tag ) . '">' . "\n";
     }
 }
 add_action( 'wp_head', 'pcnu_meta_description');
