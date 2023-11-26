@@ -80,7 +80,7 @@ function pcnu_meta_description() {
         $des_post = strip_shortcodes( $post->post_content );
         $des_post = str_replace( array("\n", "\r", "\t"), ' ', $des_post );
         $des_post = mb_substr( $des_post, 0, 300, 'utf8' );
-        echo '<meta name="description" content="' . $des_post . '">' . "\n";
+        echo '<meta name="description" content="' . esc_attr( $des_post ) . '">' . "\n";
     }
     if ( is_home() ) {
         echo '<meta name="description" content="Website Resmi PCNU Temanggung sebagai media online untuk menyampaikan informasi seputar Islam, NU, Berita Temanggung, Berita Jawa Tengah dan artikel bermanfaat.">' . "\n";
