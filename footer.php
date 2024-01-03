@@ -30,7 +30,7 @@
             <ul class="flex flex-col space-y-2.5">
                <?php
                $article_categories =get_categories( array(
-                  'orderby'      => 'count',
+                  'orderby'      => 'id',
                   'order'        => 'DESC',
                   'number'       => 5,
                   'child_of'    => '9'
