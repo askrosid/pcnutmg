@@ -30,10 +30,10 @@
             <ul class="flex flex-col space-y-2.5">
                <?php
                $article_categories =get_categories( array(
-                  'orderby'      => 'id',
+                  'orderby'      => 'count',
                   'order'        => 'DESC',
                   'number'       => 5,
-                  'child_of'    => '9'
+                  'child_of'    => '5'
                ) );
                foreach ($article_categories as $article_category) {
                   echo '<li><a href="' . get_category_link($article_category->term_id) . '" class="hover:text-textlight-200 dark:hover:text-textdark-100">' . '#' . $article_category->name . '</a></li>';
