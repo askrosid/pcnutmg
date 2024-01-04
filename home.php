@@ -18,9 +18,10 @@
          <div class="flex flex-wrap items-center">
             <div class="basis-full md:basis-3/5">
                <?php if(has_post_thumbnail()): ?>
-                  <?php $latest_post_slide_thumbnail_srcset = wp_get_attachment_image_srcset( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' ); ?>
-                  <?php $latest_post_slide_thumbnail_sizes = wp_get_attachment_image_sizes( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' ); ?>
-                  <a href="<?php the_permalink(); ?>" class="group hover:bg-textlight-200"><img src="<?php echo esc_url(wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' )); ?>" srcset="<?php echo esc_attr($latest_post_slide_thumbnail_srcset); ?>" sizes="<?php echo esc_attr($latest_post_slide_thumbnail_sizes); ?>" alt="<?php the_title(); ?>" class="w-full min-h-[300px] sm:min-h-[450px] lg:min-h-[570px] object-cover transition duration-300 ease-in-out group-hover:brightness-75 dark:brightness-75 dark:group-hover:brightness-90"></a>
+                  <?php $latest_post_slide_thumbnail_sizes = wp_get_attachment_image_sizes( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+                  <?php $latest_post_slide_thumbnail_srcset = wp_get_attachment_image_srcset( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+                  <?php $latest_post_slide_thumbnail_url = wp_get_attachment_image_url( get_post_thumbnail_id( get_the_ID() ), 'full' ); ?>
+                  <a href="<?php the_permalink(); ?>" class="group hover:bg-textlight-200"><img src="<?php echo esc_url($latest_post_slide_thumbnail_url); ?>" srcset="<?php echo esc_attr($latest_post_slide_thumbnail_srcset); ?>" sizes="<?php echo esc_attr($latest_post_slide_thumbnail_sizes); ?>" alt="<?php the_title(); ?>" class="w-full min-h-[300px] sm:min-h-[450px] lg:min-h-[570px] object-cover transition duration-300 ease-in-out group-hover:brightness-75 dark:brightness-75 dark:group-hover:brightness-90"></a>
                <?php endif; ?>
             </div>
             <div class="basis-full md:basis-2/5 z-10 mt-7 md:mt-0">
